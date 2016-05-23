@@ -4,10 +4,50 @@
       <h2><a href="{{pathFor route='home'}}">Sales</a></h2>
     </div>
     <div class="side2">
-      <div class="login">
-        <i class="fa fa-key"></i>
-        <span>Login</span>
+      {{#unless currentUser}}
+      <div class="division">
+        <div style="text-align: center">
+          <i class="fa fa-key"></i>
+        </div>
+        <div style="text-align: center">
+          <span>Login</span>
+        </div>
       </div>
+      <div class="division">
+        <div style="text-align: center">
+          <i class="fa fa-sign-in"></i>
+        </div>
+        <div style="text-align: center">
+          <span>Sign up</span>
+        </div>
+      </div>
+      {{/unless}}
+      {{#if currentUser}}
+      <div class="division">
+        <div style="text-align: center">
+          <i class="fa fa-user"></i>
+        </div>
+        <div style="text-align: center">
+          <span>{{ userInfo.profile.first_name }}&nbsp;{{ userInfo.profile.last_name }}</span>
+        </div>
+      </div>
+      <div class="division">
+        <div style="text-align: center">
+          <a href="{{ pathFor route='productNew' }}"><i class="fa fa-cubes"></i></a>
+        </div>
+        <div style="text-align: center">
+          <span>Upload Product</span>
+        </div>
+      </div>
+      <div class="division">
+        <div style="text-align: center">
+          <i class="fa fa-sign-out"></i>
+        </div>
+        <div style="text-align: center">
+          <span>Logout</span>
+        </div>
+      </div>
+      {{/if}}
     </div>
   </div>
 </template>

@@ -1,0 +1,11 @@
+<template name="shopping">
+  <div>
+    <h1>New Product</h1>
+    {{#each products}}
+    <div>
+      {{> shoppingItem}}
+    </div>
+    {{/each }}
+    <div class="clearfix"></div>
+  </div>
+</template>

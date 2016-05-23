@@ -3,7 +3,11 @@
     <h1>New Product</h1>
     <form>
       <div style="float: left;width: 50%">
-        Photo
+        <input type="file" name="product_photo" style="position: absolute;top: -9999px;left: -9999px" value="" autocomplete="off"/>
+        <button type="button" name="upload" disabled="{{uploadingValue}}">Upload photo</button>
+        <div style="margin-top: 20px; text-align: center">
+          <img src="{{ imageUploaded.url }}" style="max-width: 60%"/>
+        </div>
       </div>
       <div style="float: left;width: 50%">
         <div>

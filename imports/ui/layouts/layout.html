@@ -5,5 +5,11 @@
     {{> yield}}
   </div>
   {{> footer}}
+  {{# if viewLoginModal }}
+    {{> modalLogin}}
+  {{/if}}
+  {{# if viewSignupModal }}
+    {{> modalSignup}}
+  {{/if}}
 </body>
 </template>

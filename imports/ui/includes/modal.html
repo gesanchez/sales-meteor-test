@@ -1,0 +1,11 @@
+<template name="modal">
+  <div class="dialog">
+    <div class="overlay"></div>
+    <div class="modal" style="width:{{ width }}px;">
+      <div class="content">
+        {{> Template.contentBlock}}
+      </div>
+      <div class="fa fa-times"></div>
+    </div>
+  </div>
+</template>

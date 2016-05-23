@@ -1,0 +1,34 @@
+<template name="modalSignup">
+{{# modal name_session="loginSignup" width="400"}}
+<h1>Register with us</h1>
+<form>
+  <div>
+    <label>Email:</label>
+    <input type="text" placeholder="" autocomplete="off" name="email"/>
+  </div>
+  <div style="margin-top: 10px;">
+    <label>Password:</label>
+    <input type="password" placeholder="" autocomplete="off" name="password"/>
+  </div>
+  <div style="margin-top: 10px;">
+    <div style="width: 50%;float: left">
+      <label>First name</label>
+      <input type="text" placeholder="" autocomplete="off" name="first_name"/>
+    </div>
+    <div style="width: 50%;float: left">
+      <label>Last name</label>
+      <input type="text" placeholder="" autocomplete="off" name="last_name"/>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  {{#if errorSignup}}
+  <div style="text-align: center">
+    <p style="color: #a94442">{{errorSignup}}</p>
+  </div>
+  {{/if}}
+  <div style="text-align: center;margin-top: 10px;">
+    <button type="submit">Sign up</button>
+  </div>
+</form>
+{{/modal }}
+</template>

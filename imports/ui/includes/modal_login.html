@@ -1,0 +1,23 @@
+<template name="modalLogin">
+{{# modal name_session="loginModal"}}
+<h1>Login</h1>
+<form>
+  <div>
+    <label>Email:</label>
+    <input type="text" placeholder="" autocomplete="off" name="email"/>
+  </div>
+  <div style="margin-top: 10px;">
+    <label>Password:</label>
+    <input type="password" placeholder="" autocomplete="off" name="password"/>
+  </div>
+  {{#if errorLogin}}
+  <div style="text-align: center">
+    <p style="color: #a94442">{{errorLogin}}</p>
+  </div>
+  {{/if}}
+  <div style="text-align: center;margin-top: 10px;">
+    <button type="submit">Enter</button>
+  </div>
+</form>
+{{/modal }}
+</template>
